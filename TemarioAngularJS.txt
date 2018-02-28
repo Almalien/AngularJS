@@ -1,0 +1,24 @@
+1.- Hola Mundo (instalar Angular)
+2.- Controllers y Modulos (mencionar Dependency Injection)
+3.- data binding (ng-model)
+4.- Separar controller y modulos
+5.- ng-events, ng-class
+6.- Llamadas AJAX $http
+7.- Filters
+8.- Factories y Services
+9.- Directivas
+10.- Routing
+
+
+Practica: Desarrollar una aplicacion FrontEnd utilizando Angular JS (SPA)
+
+En la practica se debe incporporar lo siguiente:
+
+* Almenos usar 2 o mas controllers.
+* Usar factories, services o ambos en los controllers.
+* Injectar almenos una libreria en el modulo y usarla en algun controller.
+* Usar al menos 3 eventos con angularJS.
+* Realizar llamadas AJAX $http.
+* Usar y crear filtros de angular.
+* almenos una directiva y usuarla. (NO)
+* La App deve ser SPA usando ngRoute

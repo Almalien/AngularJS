@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="myModule">
+<head>
+    
+    <meta charset="utf-8">
+  <title>Angular JS SPA</title>
+
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.6.9/angular-route.min.js"></script>
+    <script src="appModule.js"></script>
+  
+</head>
+<body ng-controller="mainController">
+    <h1 style= " text-align:center; border-style:solid; border-color: gray; color: blue">Welcome to this SPA</h1>
+    <br>
+
+    <div id="main" >
+
+    {{message}}
+    <div ng-view></div>
+
+    </div>
+
+    
+</body>
+</html>

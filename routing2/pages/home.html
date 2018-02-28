@@ -1,0 +1,14 @@
+<div>
+    <h2>Hola soy home</h2>
+    <ul ng-init="getInfo()">
+            <li ng-repeat="image in listImages">
+                <p>{{image.title}}</p>
+                <img ng-src={{image.thumbnailUrl}}>
+                <a href="#!/detalle/{{image.title}}">Ver Detalle</a>
+                <!-- <div class="circular" style="background-image:url({{image.thumbnailUrl}});background-position:center;background-size:cover;">
+                </div>
+                <div class="circular" back-img="{{image.thumbnailUrl}}" placeholder="{{image.thumbnailUrl}}">
+                </div> -->
+            </li>
+        </ul>
+</div>

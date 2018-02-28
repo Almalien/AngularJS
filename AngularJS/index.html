@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html ng-app = "appModule">
+<head>
+  <meta charset="utf-8">
+  <title>My AngularJS App</title>
+<!--    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>-->
+</head>
+<body ng-controller="ctrlAngular as ac">
+    <!-- Filters -->
+    <label>{{ac.fechaAct}}</label>
+    <br>
+    <label>{{ac.fechaAct | date: 'short'}}</label><br>
+    <label>{{ac.dinero}}</label><br>
+    <label>{{ac.dinero | currency}}</label><br>
+    <label>{{ac.dinero | currency:"% "}}</label><br>
+    <!-- <input type="text" ng-model="ac.user.name"/>
+    <input type="text" ng-model="ac.user.lastName"/>
+    <button ng-click="ac.insertInfo()">Add</button>
+    <br> -->
+    <!-- <label>New User: <b>{{ac.user.name}}</b></label>
+    
+    
+    <h3>Usuarios:</h3>
+    <ul>
+        <li ng-repeat="user in ac.listUsers">
+            {{user.name}} - {{user.lastName}}
+            <button ng-click="ac.deleteUser(user)">Delete</button>
+        </li>
+    </ul>
+    <br> -->
+    <!-- <h3>Usuarios 2:</h3>
+    <ul>
+        <li ng-repeat="user in ac.usuarios">
+            {{user.name}} - {{user.lastName}}
+            <a href="#" ng-click="ac.deleteUserServ(user)">Delete</a>
+        </li>
+    </ul> -->
+    <!-- <ul >
+        <li ng-repeat="p in ac.listComplejos">
+            <label>{{p.title}}</label>
+            <p>{{p.body}}</p>
+        </li>
+    </ul>
+    <a ng-init="ac.getInfo()"></a> -->
+    
+  <script src="components/angular.min.js"></script>
+    <script src="angular-local-storage.js"></script>
+    <script src="moduleAJS.js"></script>
+    <script src="crud.js"></script>
+    <script src="controllerAJS.js"></script>
+<!--  <script src="bower_components/angular-route/angular-route.js"></script>-->
+</body>
+</html>

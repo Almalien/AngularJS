@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="appModule">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="angular-local-storage.js"></script>
+    <script src="appModule.js"></script>
+    <script src="factory.js"></script>
+    <meta charset="utf-8">
+  <title>My AngularJS App</title>
+</head>
+<body ng-controller="firstController">
+    
+    <input type="text" ng-model="user.name"/>
+    <input type="text" ng-model="user.lastName"/>
+    <button ng-click="addUser()">Add</button>
+    <!-- <label>{{name}}</label> -->
+
+    
+    <ul>
+      <li ng-repeat="u in listUsers">
+          <label>{{u.name}}</label> - 
+          <label> {{u.lastName}} </label>
+          <a href="#" ng-click="deleteUserServ(u)">Delete</a>
+      </li>
+    </ul>
+    <br>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app = "appModule">
+<head>
+    <style>
+        .setColor{
+            background-color: blue;
+        }
+        .noColor{
+            background-color: white;
+        }
+    </style>
+  <meta charset="utf-8">
+  <title>My AngularJS App</title>
+</head>
+<body ng-controller="filterController">
+    <!-- <label>{{"hola" + " Ulises"}} {{2 + 3}}</label> -->
+    <!-- {{mi_html}}
+    <br>
+    {{mi_html | removeHtml}}
+    <br>
+    {{objJson | json}}
+    <br>
+    {{nombreUsuario | textMayus}}
+    <br> -->
+    <button ng-mouseover="bandera = 'si'" ng-mouseleave="bandera = 'no'" ng-class="{'setColor': bandera == 'si'}">Hover me</button>
+    <span ng-hide="bandera == 'si'">click me!!</span>
+
+
+    <script src="components/angular.min.js"></script>
+    <script src="appModule.js"></script>
+    <script src="removeItemFilter.js"></script>
+
+    
+    <!-- <script src="components/angular-local-storage.js"></script>
+    
+    <script src="crud.js"></script>
+    <script src="controllerAJS.js"></script> -->
+</body>
+</html>
