@@ -14,11 +14,17 @@ Practica: Desarrollar una aplicacion FrontEnd utilizando Angular JS (SPA)
 
 En la practica se debe incporporar lo siguiente:
 
-* Almenos usar 2 o mas controllers.
+
 * Usar factories, services o ambos en los controllers.
 * Injectar almenos una libreria en el modulo y usarla en algun controller.
+
+
+
+
+////////////////////
+* Almenos usar 2 o mas controllers.(Controller Home, Filtros, Eventos,Lista de algo($http-ajax)
+* almenos una directiva y usuarla. (NO)
+* La App deve ser SPA usando ngRoute
 * Usar al menos 3 eventos con angularJS.
 * Realizar llamadas AJAX $http.
 * Usar y crear filtros de angular.
-* almenos una directiva y usuarla. (NO)
-* La App deve ser SPA usando ngRoute
