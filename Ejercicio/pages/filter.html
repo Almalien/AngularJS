@@ -1,3 +1,17 @@
 <h1>Filter</h1>
 
 <h3>{{message}}</h3>
+
+
+<div ng-controller="FilterController" >
+
+
+        <p>The name is {{ nombre }}</p>
+    <p>The name is {{ nombre | uppercase }}</p>
+    <p>The name is {{ nombre | lowercase }}</p>
+    <h2>Filtro creado para quitar espacios en texto</h2>
+    <p>{{"Frase con espacios" }}</p>
+    <p>{{"Frase sin espacios" | noSpace}}</p>
+
+</div> 
+

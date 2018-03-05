@@ -18,21 +18,46 @@ app.config(function($routeProvider) {
     controller  : 'EventController'
   })
 
+  .when('/ajax', {
+    templateUrl : 'pages/ajax.html',
+    controller  : 'AjaxController'
+  })
+
   
 
   .otherwise({redirectTo: '/'});
 });
 
-app.controller('HomeController', function($scope) {
-  $scope.message = 'Hello from HomeController';
+app.controller('HomeController', function($scope,$location) {
+  $scope.message = 'Hola, HomeController';
+  $scope.url = $location.absUrl();
 });
 
 app.controller('FilterController', function($scope) {
-  $scope.message = 'Hello from FilterController';
+  $scope.message = 'Hola, FilterController';
+  $scope.nombre = 'Alma Rosa';
 });
 
 app.controller('EventController', function($scope) {
-  $scope.message = 'Hello from EventController';
+  $scope.message = 'Hola, EventController';
+  $scope.count = 0;
+  $scope.showMe = false;
+  $scope.showMe2 = false;
+    $scope.myFunc = function() {
+        $scope.showMe = !$scope.showMe;
+    }
+
+    $scope.myFunc2 = function() {
+      $scope.showMe2 = !$scope.showMe2;
+  }
 });
+
+app.filter('noSpace', function() {
+  return function noSpace(text) {
+     return text.split(' ').join('');
+  };
+});
+
+
 
 
