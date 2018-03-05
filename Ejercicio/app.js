@@ -1,4 +1,4 @@
-var app = angular.module('myApp', ['ngRoute']);
+var app = angular.module('myApp', ['ngRoute','pascalprecht.translate']);
 
 app.config(function($routeProvider) {
   $routeProvider
@@ -28,10 +28,37 @@ app.config(function($routeProvider) {
   .otherwise({redirectTo: '/'});
 });
 
+app.config(["$translateProvider",function($translateProvider){
+  
+  var en_translations = {
+    "language" : "Selected Language English",
+    "greeting" : "Welcome" 
+  }
+  
+  var sp_translations = {
+    "language" : "Selected Language Spanish",
+    "greeting" : "Bienvenido"  
+  }
+  
+  $translateProvider.translations('en',en_translations);
+  
+  $translateProvider.translations('sp',sp_translations);
+  
+  $translateProvider.preferredLanguage('en');
+  
+}]);
+
 app.controller('HomeController', function($scope,$location) {
   $scope.message = 'Hola, HomeController';
   $scope.url = $location.absUrl();
+  
 });
+
+app.controller("translateController" ,["$scope","$translate",function($scope,$translate){
+  $scope.changeLanguage = function(lang){
+   $translate.use(lang); 
+  }
+}]);
 
 app.controller('FilterController', function($scope) {
   $scope.message = 'Hola, FilterController';
@@ -56,6 +83,11 @@ app.filter('noSpace', function() {
   return function noSpace(text) {
      return text.split(' ').join('');
   };
+});
+
+app.controller('DataController', function ($scope, $http) {
+  $http.get("http://jsonplaceholder.typicode.com/users")
+  .then(function (response) {$scope.names = response.data;});
 });
 
 

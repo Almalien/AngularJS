@@ -1,5 +1,50 @@
 <h1>Home</h1>
 
 <h3>{{message}}</h3>
-<p>Uso de servicio location:</p>
+<hr>
+<h2>Using location service:</h2>
 <h3>{{url}}</h3>
+<br>
+<hr>
+<div ng-controller="translateController">
+    <h2>Using angular-translate</h2>
+    
+    <div>
+      <button ng-click="changeLanguage('en')">English</button>
+      <button ng-click="changeLanguage('sp')">Spanish</button>
+    </div>
+    
+    <h2>{{'language' | translate}}</h2>
+    
+    
+    
+    <p>{{'greeting' | translate}}</p>
+ 
+  </div>
+  <br>
+
+  <hr>
+
+  <h2>Jsonplaceholder Users</h2>
+  <div ng-controller="DataController">
+    <table style="border:1px solid blue" >
+        <thead > 
+            <tr >
+            <th style="border:1px solid blue">ID</th>
+            <th style="border:1px solid blue">Name</th>
+            <th style="border:1px solid blue">Username</th>
+            <th style="border:1px solid blue">Email</th>
+            </tr>
+        </thead>
+        <tbody>   
+            <tr ng-repeat="data in names">
+                <td style="border:1px solid blue">{{data.id}}</td>
+                <td style="border:1px solid blue">{{data.name}}</td>
+                <td style="border:1px solid blue">{{data.username}}</td>
+                <td style="border:1px solid blue">{{data.email}}</td>
+            </tr>
+        </tbody>
+            
+        
+    </table>
+  </div>
